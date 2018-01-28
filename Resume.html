@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+	<h1 style="text-align: center; font-size: 300%; line-height:100%;">
+	<span style="color: rgb(153, 51, 0);">Welcome!</span></h1>
+    </head>
+    <style>
+    	table, th, td 
+    	{
+        	border: 1px solid black;
+    	}
+    	th, td 
+    	{
+        	padding: 15px;
+    	}
+    	p 
+    	{
+    		display: block;
+    		margin-top: 1em;
+    		margin-bottom: 1em;
+    		margin-left: 1em;
+    		margin-right: 1em;
+    	}
+    	.button
+	{
+ 		display: inline-block;
+  	 	border-radius: 12px;
+         	background-color: #f4511e;
+         	border: none;
+         	color: #FFFFFF;
+         	text-align: center;
+         	font-size: 26px;
+         	padding: 20px;
+         	width: 200px;
+         	margin: 5px;
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+    </style>
+    <title>Resume</title>
+    <body>
+	<div align = "center">
+	<button type="button" onclick="resume()" id="r" class="button">Resume</button>
+	<button type="button" onclick="contact_me()" id="c" class="button">Contact Me</button>
+	</div>
+	<div align = "center" id="main">
+        </div>
+
+    <script>
+        let p = document.createElement('p');
+            p.setAttribute('id', 'content');
+            var ele = document.getElementById("main");
+            ele.appendChild(p);
+		function resume()
+		{
+             document.getElementById("content").innerHTML = "";
+             document.getElementById("content").insertAdjacentHTML('afterbegin','<div style="overflow-y:auto;"><table style="width:60%"><caption style="font-size: 40px;"><b>Resume</b></caption><tr><th colspan="2" style="font-size: 28px;">Personal Details</th></tr>	<tr><td>Name</td><td>Abhinav Pandey</td></tr>	<tr><td>DOB</td><td>23 March 2000</td></tr>	<tr><td>Address</td><td>village- Tharauli, <br> Belahiya Chauraha, <br> P.O.- Tetari Bazar, <br> Dist.- Siddharth Nagar, PIN- 272207 <br> Uttar Pradesh</td></tr>	<tr><td>Nationality</td><td>Indian</td></tr>	<tr><td>Marital Status</td><td>Unmarried</td></tr>	<tr><td>Languages Known</td><td>English <br>Hindi </td></tr>	<tr><th colspan="2" style="font-size: 28px;">Educational Qualification</th></tr>	<tr><td>X Standard</td><td>92% ICSE</td></tr>	<tr><td>XII Standard</td><td>94.6% CBSE</td></tr>	<tr><td>Graduation</td><td>currently pursuing B.Tech in Computer Science <br>and Engineering @ IIT Jodhpur</td></tr>	<tr><td>Hobbies</td><td>Playing Football<br>Playing Cards<br>Playing Cricket</td></tr></table><br><div><font size=6px>Contact Details:</font></div><div><br>Abhinav Pandey<br>Email:    pandey.5@iitj.ac.in@gmail.com<br>Mobile: +91-8874352517</div>');
+
+           
+        }
+        function contact_me()
+        {
+            
+            document.getElementById("content").innerHTML = "";
+            document.getElementById("content").insertAdjacentHTML('afterbegin','<form><fieldset><legend>Contact Details</legend>Name: <input type="text"<br><br><br>Email:<input type="text"><br><br>Mobile:<input type="text" ><br><br><textarea name="description" rows="10" cols="20">Your description.</textarea><br><br>		<input type="reset">	<br><br>	<input type="submit" onclick="alert(\'Your Contact Details have been submitted successfully.\')" value="Submit">	</fieldset>	</form>	<br>	<div align="center"><font size=3px>Contact Me:</font></div>	<div align="center">		<br>Abhinav Pandey<br>Email: pandey.5@iitj.ac.in@gmail.com		<br>Mobile: +91-8874352517	</div>');
+      	}
+   </script>
+   </body>
+</html>
